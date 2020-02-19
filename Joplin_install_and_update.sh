@@ -111,7 +111,7 @@ if [[ ! -e ~/.joplin/VERSION ]] || [[ $(< ~/.joplin/VERSION) != "$RELEASE_VERSIO
        # Update application icons
         if [[ $DESKTOP =~ .*unity.* ]]
         then
-          echo 'Permisson to create desktop file'
+          echo 'Permission to create desktop file for Ubuntu: ' |
           [[ `command -v desktop-file-install` ]] && sudo desktop-file-install ~/.local/share/applications/appimagekit-joplin.desktop
         fi
        [[ `command -v update-desktop-database` ]] && update-desktop-database ~/.local/share/applications
