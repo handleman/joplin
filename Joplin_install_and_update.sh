@@ -112,11 +112,7 @@ if [[ ! -e ~/.joplin/VERSION ]] || [[ $(< ~/.joplin/VERSION) != "$RELEASE_VERSIO
         if [[ $DESKTOP =~ .*unity.* ]]
         then
           echo 'Permisson to create desktop file'
-<<<<<<< HEAD
           [[ `command -v desktop-file-install` ]] && sudo desktop-file-install ~/.local/share/applications/appimagekit-joplin.desktop
-=======
-          [[ `command -v desktop-file-install` ]] && sudo desktop-file-install -m ~/.local/share/applications/appimagekit-joplin.desktop
->>>>>>> e70be8281e2a64aa7ac5c8b907333ddde6bb71d8
         fi
        [[ `command -v update-desktop-database` ]] && update-desktop-database ~/.local/share/applications
        print "${COLOR_GREEN}OK${COLOR_RESET}"
